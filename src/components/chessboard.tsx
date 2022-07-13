@@ -18,10 +18,10 @@ export default function chessboard() {
 
                 if(number % 2 === 0) {
                     board.push(
-                        <div className="tile black-tile">{hAxis[i]}-{vAxis[j]}</div>);
+                        <div className="tile black-tile"></div>);
                 } else {
                     board.push(
-                        <div className="tile white-tile">{hAxis[i]}-{vAxis[j]}</div>);
+                        <div className="tile white-tile"></div>);
                 }
                 console.log(hAxis[i], vAxis[j]);
             //* combines V and H axis' and puts it on the board
