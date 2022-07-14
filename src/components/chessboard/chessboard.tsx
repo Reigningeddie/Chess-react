@@ -24,9 +24,35 @@ for(let i = 0; i < 8; i++) {
 
     //* loops through numbers 1-8 for white pawns
 for(let i = 0; i < 8; i++) {
-//* hard codes white pawns into selected tile array
+//* hard codes white pawns into selected chessboards array
     pieces.push({ image: "assets/images/Pawn_W.png", x: i, y: 1 })
 }
+    //* rooks
+pieces.push({ image: "assets/images/Rook_B.png", x: 0, y: 7 })
+pieces.push({ image: "assets/images/Rook_B.png", x: 7, y: 7 })
+pieces.push({ image: "assets/images/Rook_W.png", x: 0, y: 0 })
+pieces.push({ image: "assets/images/Rook_W.png", x: 7, y: 0 })
+
+    //* knights
+pieces.push({ image: "assets/images/Knight_B.png", x: 1, y: 7 })
+pieces.push({ image: "assets/images/Knight_B.png", x: 6, y: 7 })
+pieces.push({ image: "assets/images/Knight_W.png", x: 1, y: 0 })
+pieces.push({ image: "assets/images/Knight_W.png", x: 6, y: 0 })
+
+    //* Bishops
+pieces.push({ image: "assets/images/Bishop_B.png", x: 2, y: 7 })
+pieces.push({ image: "assets/images/Bishop_B.png", x: 5, y: 7 })
+pieces.push({ image: "assets/images/Bishop_W.png", x: 2, y: 0 })
+pieces.push({ image: "assets/images/Bishop_W.png", x: 5, y: 0 })
+
+    //* Queen
+pieces.push({ image: "assets/images/Queen_B.png", x: 3, y: 7 })
+pieces.push({ image: "assets/images/Queen_W.png", x: 3, y: 0 })
+
+    //* King
+pieces.push({ image: "assets/images/King_B.png", x: 4, y: 7 })
+pieces.push({ image: "assets/images/King_W.png", x: 4, y: 0 })
+
 export default function chessboard() {
     //* creates an array
         let board = [];
