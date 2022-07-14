@@ -1,4 +1,5 @@
 import './chessboard.css';
+import Tile from "../Tiles/tile";
 
     //* horizontal tiles
 const hAxis = ["a", "b", "c", "d", "e", "f", "g", "h"];
@@ -13,15 +14,11 @@ export default function chessboard() {
         for(let j = vAxis.length-1; j >= 0; j--) {
         //* loops through horizontal
             for(let i = 0; i < hAxis.length; i++) {
+            //* adds both axis arrays and adds 1 because arrays start at 0
                 const number = j + i + 2;
+            //* takes the number and adds it to the tile - logic continued in tile.tsx
+                board.push(<Tile number={ number } />);
 
-                if(number % 2 === 0) {
-                    board.push(
-                        <div className="tile black-tile"></div>);
-                } else {
-                    board.push(
-                        <div className="tile white-tile"></div>);
-                }
                 console.log(hAxis[i], vAxis[j]);
             //* combines V and H axis' and puts it on the board
 
