@@ -35,6 +35,7 @@ for (let p = 0; p < 2; p++) {
 //* if its zero assign 7 otherwise assign 0
     const y = p === 0 ? 7 : 0;
 
+    //*inserts color and y variable 
 pieces.push({ image: `assets/images/Rook_${color}.png`, x: 0, y })
 pieces.push({ image: `assets/images/Rook_${color}.png`, x: 7, y })
 pieces.push({ image: `assets/images/Knight_${color}.png`, x: 1, y })
@@ -44,7 +45,6 @@ pieces.push({ image: `assets/images/Bishop_${color}.png`, x: 5, y })
 pieces.push({ image: `assets/images/Queen_${color}.png`, x: 3, y })
 pieces.push({ image: `assets/images/King_${color}.png`, x: 4, y })
 }
-
 
 
 export default function chessboard() {
@@ -66,7 +66,7 @@ export default function chessboard() {
                 })
 
             //* takes the number and adds it to the tile - logic continued in tile.tsx
-                board.push(<Tile image={image} number={number} />);
+                board.push(<Tile key={`${j}.${i}`}image={image} number={number} />);
 
 
 
